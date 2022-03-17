@@ -16,14 +16,10 @@ const port = 8080;
 // Body parsing Middleware
 
 app.use(cors())
-// app.use(cors({
-//   origin: 'http://localhost:3000/'
-// }));
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", async (req: Request, res: Response): Promise<Response> => {
+app.get("/movies", async (req: Request, res: Response): Promise<Response> => {
         console.log('request received:', req.query)
 
 
@@ -42,6 +38,27 @@ app.get("/", async (req: Request, res: Response): Promise<Response> => {
           .json(movies);
 
     }
+);
+
+app.get("/movie", async (req: Request, res: Response): Promise<Response> => {
+  console.log('request received:', req.query)
+
+
+  const details = await fetch(`https://imdb-api.com/en/API/Title/k_q89zsv15/${req.query.id}`)
+    .then((response: { text: () => any; }) => response.text())
+    .then((data: any) => {
+      return data;
+    })
+    .catch((error: any) => {
+      console.error(error);
+    });
+
+  console.log(details)
+  return res
+    .status(200)
+    .json(details);
+
+}
 );
 
 try {

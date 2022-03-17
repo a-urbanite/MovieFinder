@@ -1,1 +1,32 @@
+/* RESETTING DEFAULT RULES */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* COLOR SCHEME */
+
+/* :root {
+    --as-Black-Coffee: rgb(58, 46, 57);
+    --as-Midnight-Green-Eagle: rgb(30, 85, 92);
+    --as-Unbleached-Silk: rgb(244, 216, 205);
+    --as-Middle-Yellow-Red: rgb(237, 177, 131);
+    --as-Red-Salsa: rgb(241, 81, 82);
+} */
+
+/* GENERAL */
+
+html {
+    font-size: 62.5%;
+  }  
+  
+  body {
+    /* Visual */
+    background-color: var(--as-Midnight-Green-Eagle);
+    /* Typographic */
+    font-family: 'Helvetica Light', 'Helvetica', Arial, sans-serif;
+    color: var(--as-Black-Coffee);
+  
+  }
