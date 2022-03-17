@@ -8,13 +8,13 @@ function App() {
 
   const [ data, setData ] = useState({});
 
-  console.log('STATE FROM APP', data)
+  // console.log('STATE FROM APP', data)
 
   return (
     <div className="App">
       <Header></Header>
       <Form setData={setData}></Form>
-      <Gallery data={data}></Gallery>
+      <Gallery data={data} setData={setData}></Gallery>
     </div>
   );
 }

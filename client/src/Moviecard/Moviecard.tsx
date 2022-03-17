@@ -16,7 +16,7 @@ const Moviecard: React.FC <MoviecardProps> = ({movie}) => {
             <div>
                 <h3>{movie.Title}</h3>
                 <p>{movie.Type} - {movie.Year}</p>
-                <img src={movie.Poster} alt={'Poster - ' + movie.Title} width="200"></img>
+                { movie.Poster !== 'N/A' && <img src={movie.Poster} alt={'Poster - ' + movie.Title} width="200"></img>}
             </div>
         </li>
   )
