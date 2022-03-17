@@ -1,8 +1,13 @@
 import React from 'react'
 
-const Form: React.FC = () => {
+interface formProps {
+  setData: Function,
+}
 
-  const fetchData = (event: React.FormEvent<HTMLFormElement> & { target: HTMLFormElement }) => {
+
+const Form: React.FC <formProps> = ({setData}) => {
+
+  const fetchData = async (event: React.FormEvent<HTMLFormElement> & { target: HTMLFormElement }) => {
     event.preventDefault()
     const formData = Object.fromEntries(new FormData(event.target));
     console.log(formData)
@@ -12,12 +17,18 @@ const Form: React.FC = () => {
     let params = {name: formData.name.toString()};
     url.search = new URLSearchParams(params).toString();
 
-    fetch(url.toString())
+    const movies = await fetch(url.toString())
       .then(response => response.json())
-      .then(data => console.log(data))
+      .then(data => JSON.parse(data))
+      .then(data => data)
       .catch((error) => {
         console.error(error);
       });
+
+
+    setData(movies)
+
+    console.log('FETCHRESULT FROM END OF FORM', movies)
   };
 
   return (
