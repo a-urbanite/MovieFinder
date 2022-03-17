@@ -68,7 +68,8 @@ const DetailCard: React.FC <DetailCardProps>= ({moviedetailsState, detailCardTog
           { moviedetailsState.trailer && <p>Trailer: {moviedetailsState.trailer}</p> }
           { moviedetailsState.wikipedia && <p>Wikipedia: {moviedetailsState.wikipedia}</p> }
           <p>Summary: {moviedetailsState.plot}</p>
-          <a href={'https://www.imdb.com/title/' + moviedetailsState.id} target="_blank" rel="noreferrer">Check it out on IMDB!</a>
+          <a href={'https://www.imdb.com/title/' + moviedetailsState.id} target="_blank" rel="noreferrer">Check it out on IMDB</a> <br></br>
+          <a href={'https://www.youtube.com/results?search_query=official+trailer+' + moviedetailsState.title} target="_blank" rel="noreferrer">Search for a trailer</a>
       </>
     )
   } else { return null}

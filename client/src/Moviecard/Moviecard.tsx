@@ -36,7 +36,7 @@ const Moviecard: React.FC <MoviecardProps> = ({movie}) => {
                   <p>{movie.Type} - {movie.Year}</p>
                   { movie.Poster !== 'N/A' && <img src={movie.Poster} alt={'Poster - ' + movie.Title} width="200"></img>}
                   <br></br>
-                  <button onClick={() => loadDetails(movie.imdbID)}>more details please!</button>
+                  <button onClick={() => loadDetails(movie.imdbID)}>{detailCardToggle ? 'Less Details' : 'More Details Please!' }</button>
                   
                   <DetailCard moviedetailsState={moviedetailsState} detailCardToggle={detailCardToggle}/>
                   
