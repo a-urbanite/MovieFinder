@@ -8,13 +8,13 @@
   
   /* COLOR SCHEME */
 
-/* :root {
-    --as-Black-Coffee: rgb(58, 46, 57);
-    --as-Midnight-Green-Eagle: rgb(30, 85, 92);
-    --as-Unbleached-Silk: rgb(244, 216, 205);
-    --as-Middle-Yellow-Red: rgb(237, 177, 131);
-    --as-Red-Salsa: rgb(241, 81, 82);
-} */
+:root {
+    --as-Chaleston-Green: rgb(11, 32, 39);
+    --as-Teal-Blue: rgb(64, 121, 140);
+    --as-Green-Sheen: rgb(112, 169, 161);
+    --as-Ash-Grey: rgb(207, 215, 199);
+    --as-Corn-Orange: rgb(241, 81, 82);
+}
 
 /* GENERAL */
 
@@ -24,7 +24,7 @@ html {
   
   body {
     /* Visual */
-    background-color: var(--as-Midnight-Green-Eagle);
+    background-color: var(--as-Teal-Blue);
     /* Typographic */
     font-family: 'Helvetica Light', 'Helvetica', Arial, sans-serif;
     color: var(--as-Black-Coffee);

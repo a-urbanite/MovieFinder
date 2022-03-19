@@ -1,0 +1,52 @@
+.Moviecard {
+    /* Positioning */
+    padding: 2rem;
+    margin-bottom: 1rem;
+    /* max-width: ; */
+    /* Box model */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Visual */
+    background-color: var(--as-Green-Sheen);
+}
+
+.Moviecard:hover {
+    transform: scale(1.003);
+    box-shadow: 5px 5px 30px rgba(33,33,33,.7);
+}
+
+.Moviecard__wrapper {
+    list-style-type: none;
+}
+
+.Moviecard__title {
+    /* Positioning */
+    padding-bottom: 0.7rem;
+    /* Typographic */
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.Moviecard__type {
+    /* Positioning */
+    padding-bottom: 0.4rem;
+    /* Typographic */
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.Moviecard__button {
+    /* Positioning */
+    padding: 1rem;
+    background-color: var(--as-Ash-Grey);
+    border: none;
+    /* Typographic */
+    font-size: 1.5rem;
+    /* Other */
+    cursor: pointer;
+}
+
+.Moviecard__button:hover {
+    background-color: var(--as-Corn-Orange);
+}

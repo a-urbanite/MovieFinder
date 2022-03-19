@@ -1,0 +1,26 @@
+.header {
+    /* Positioning */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    /* Box model */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Visual */
+    background-color: var(--as-Green-Sheen);
+    color: var(--as-Chaleston-Green);
+    /* Typographic */
+    text-align: center;
+}
+
+.header__title {
+    /* Typographic */
+    font-size: 5rem;
+    font-weight: 100;
+}
+
+.header__subtitle {
+    /* Typographic */
+    font-size: 2rem;
+    font-weight: 100;
+}

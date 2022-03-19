@@ -1,0 +1,44 @@
+.Detailcard {
+    max-width: 430px;
+}
+
+.Detailcard__paragraph {
+    /* Positioning */
+    margin-top: 1rem;
+    /* Typographic */
+    font-size: 1.7rem;
+    font-weight: 100;
+}
+
+.Detailcard__plot {
+    /* Positioning */
+    margin-top: 1rem;
+    padding-right: 1rem;
+    /* Typographic */
+    font-size: 1.7rem;
+    font-weight: 100;
+    /* max-width: 37rem; */
+    max-height: 20rem;
+    overflow: auto;
+    text-align: justify;
+}
+
+.Detailcard__link-wrapper {
+    /* Positioning */
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--as-Ash-Grey);
+}
+
+.Detailcard__link-wrapper:hover {
+    background-color: var(--as-Corn-Orange);
+}
+
+.Detailcard__link {
+    /* Typographic */
+    color: var(--as-Chaleston-Green);
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 400;
+
+}

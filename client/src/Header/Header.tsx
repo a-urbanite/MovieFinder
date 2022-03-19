@@ -1,11 +1,12 @@
 import React from 'react'
+import './Header.css'
 
 const Header = () => {
   return (
       <>
-        <header>
-            <h1>MovieFinder</h1>
-            <h2>What to watch this eve?</h2>
+        <header className='header'>
+            <h1 className='header__title'>MovieFinder</h1>
+            <h2 className='header__subtitle'>What to watch this eve?</h2>
         </header>
       </>
   )

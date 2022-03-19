@@ -1,0 +1,25 @@
+.Form {
+    /* Positioning */
+    margin: 2rem;
+    /* Box model */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* Typographic */
+    color: var(--as-Chaleston-Green);
+}
+
+.Form__input {
+    /* Positioning */
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0.8rem;
+    /* Visual */
+    background-color: var(--as-Ash-Grey);
+    border: none;
+  }
+
+.Form__input:hover {
+    /* Visual */
+    background-color: var(--as-Corn-Orange);
+}

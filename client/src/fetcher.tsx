@@ -30,6 +30,8 @@ export const IMDBFetcher = async (IMDBid: string) => {
     console.error(error);
   });
 
+  console.log(movieDetails)
+
   return movieDetails
 }
 

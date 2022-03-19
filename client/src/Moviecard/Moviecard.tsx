@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DetailCard from '../DetailCard/DetailCard'
 import { IMDBFetcher } from '../fetcher'
+import './Moviecard.css'
 
 interface MoviecardProps {
     movie: {
@@ -30,13 +31,13 @@ const Moviecard: React.FC <MoviecardProps> = ({movie}) => {
   // console.log('moviedetails before reendering?', moviedetailsState)
 
     return (
-          <li>
-              <div>
-                  <h3>{movie.Title}</h3>
-                  <p>{movie.Type} - {movie.Year}</p>
-                  { movie.Poster !== 'N/A' && <img src={movie.Poster} alt={'Poster - ' + movie.Title} width="200"></img>}
+          <li className='Moviecard__wrapper'>
+              <div className='Moviecard'>
+                  <h3 className='Moviecard__title'>{movie.Title}</h3>
+                  <p className='Moviecard__type'>{movie.Type} - {movie.Year}</p>
+                  { movie.Poster !== 'N/A' && <img src={movie.Poster} alt={'Poster - ' + movie.Title}></img>}
                   <br></br>
-                  <button onClick={() => loadDetails(movie.imdbID)}>{detailCardToggle ? 'Less Details' : 'More Details Please!' }</button>
+                  <button className='Moviecard__button' onClick={() => loadDetails(movie.imdbID)}>{detailCardToggle ? 'Less Details' : 'More Details Please!' }</button>
                   
                   <DetailCard moviedetailsState={moviedetailsState} detailCardToggle={detailCardToggle}/>
                   
