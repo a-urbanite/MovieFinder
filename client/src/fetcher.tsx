@@ -1,5 +1,5 @@
 export const OMDBfetcher = async (name:string, page:number) => {
-  console.log(process)
+  console.log(window)
   let url = new URL(`http://localhost:${process.env.PORT}/movies`);
   let params = {name: name, page: `${page}`};
   url.search = new URLSearchParams(params).toString();
