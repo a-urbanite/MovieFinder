@@ -19,7 +19,7 @@ const port = process.env.PORT || 8080;
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 app.get("/movies", async (req: Request, res: Response): Promise<Response> => {
   console.log('request received: movies')
