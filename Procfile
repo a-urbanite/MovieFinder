@@ -1,1 +1,1 @@
-web: PORT=$PORT node ./index.ts
+web: PORT=$PORT ts-node-dev ./index.ts
