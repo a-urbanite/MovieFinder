@@ -1,5 +1,4 @@
 export const OMDBfetcher = async (name:string, page:number) => {
-  console.log(window)
   let url = new URL(`${window.location.origin}/movies`);
   let params = {name: name, page: `${page}`};
   url.search = new URLSearchParams(params).toString();
