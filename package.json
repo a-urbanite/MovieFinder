@@ -14,7 +14,6 @@
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.21",
-    "ts-node-dev": "^1.1.8",
     "typescript": "^4.6.2"
   },
   "dependencies": {
@@ -24,6 +23,7 @@
     "express": "^4.17.3",
     "node-fetch": "^2.6.7",
     "request": "^2.88.2",
+    "ts-node-dev": "^1.1.8",
     "zlib": "^1.0.5"
   }
 }
