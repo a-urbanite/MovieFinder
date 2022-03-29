@@ -1,6 +1,6 @@
 export const OMDBfetcher = async (name:string, page:number) => {
   console.log(window)
-  let url = new URL(`http://localhost:${process.env.PORT}/movies`);
+  let url = new URL(`http://localhost:80/movies`);
   let params = {name: name, page: `${page}`};
   url.search = new URLSearchParams(params).toString();
   
@@ -21,7 +21,7 @@ export const OMDBfetcher = async (name:string, page:number) => {
 export const IMDBFetcher = async (IMDBid: string) => {
 
   
-  let url = new URL(`http://localhost:${process.env.PORT}/movie`);
+  let url = new URL(`http://localhost:80/movie`);
   let params = {id: IMDBid};
   url.search = new URLSearchParams(params).toString();
 
