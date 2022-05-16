@@ -1,8 +1,5 @@
 import express, { Application, Request, Response } from "express";
 import cors from 'cors';
-// var zlib = require('zlib')
-// var request = require('request')
-// const bent = require('bent')
 const path = require('path')
 
 const fetch = require("node-fetch");
