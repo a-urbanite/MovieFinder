@@ -20,9 +20,10 @@ const Moviecard: React.FC <MoviecardProps> = ({movie}) => {
   const [ detailCardToggle, setdetailCardToggle ] = useState(false);
 
   const loadDetails = async (imdbID:string) => {
-    // console.log('Details requested!')
+    //console.log('Details requested!')
     const moviedetails = await IMDBFetcher(imdbID)
-    moviedetails.toggle = true;
+    //console.log('MOVIEDETAILS', moviedetails)
+    //moviedetails.toggle = true;
     setDetails(moviedetails)
     setdetailCardToggle(!detailCardToggle)
     // console.log('DETAILS', moviedetails)
