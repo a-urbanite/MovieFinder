@@ -8,13 +8,9 @@ import LoadingScreen from '../LoadingScreen/LoadingScreen';
 function App() {
 
   const [ data, setData ] = useState({});
-
   const [ isLoading, setisLoading ] = useState(false);
 
-  // console.log('STATE FROM APP', data)
-
   useEffect(() => {
-    // console.log('RERENDER TRIGGERED')
     setisLoading(false)
     window.scrollTo(0, 0)
   }, [data])

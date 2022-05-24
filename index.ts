@@ -1,23 +1,18 @@
 import express, { Application, Request, Response } from "express";
 import cors from 'cors';
 const path = require('path')
-
 const fetch = require("node-fetch");
-// import fetch from "node-fetch";
-
-// import http from 'node:http';
-// import decompressResponse from 'decompress-response';
 
 const app: Application = express();
 const port = process.env.PORT || 8080;
 
-// Body parsing Middleware
-
+// Middleware
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'client', 'build')));
 
+// Routes
 app.get("/movies", async (req: Request, res: Response): Promise<Response> => {
   console.log('request received: movies')
 
@@ -29,7 +24,6 @@ app.get("/movies", async (req: Request, res: Response): Promise<Response> => {
     .catch((error: any) => {
       console.error(error);
     });
-
 
   return res
     .status(200)
@@ -50,21 +44,17 @@ app.get("/movie", async (req: Request, res: Response): Promise<Response> => {
       console.error(error);
     });
 
-  console.log(details)
   return res
     .status(200)
     .json(details);
   }
 );
 
-// app.get('/', (req, res) => {
-//   res.json({message: 'docker is easy!'})
-// })
-
 app.use('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
 });
 
+// Initialize server and basic error handling
 try {
     app.listen(port, (): void => {
         console.log(`Express App running on http://localhost:${port}`);
